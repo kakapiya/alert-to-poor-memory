@@ -1,0 +1,22 @@
+{
+  "name": "alert-to-poor-memory",
+  "version": "1.0.0",
+  "description": "don't be silly",
+  "main": "main.js",
+  "devDependencies": {    
+    "electron": "^8.1.1"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kakapiya/alert-to-poor-memory.git"
+  },
+  "author": "geerbbf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kakapiya/alert-to-poor-memory/issues"
+  },
+  "homepage": "https://github.com/kakapiya/alert-to-poor-memory#readme"
+}

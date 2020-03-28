@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/index.css">
-    <title>课程提醒</title>
-    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-  </head>
-  <body>
 
-    <div class="day">
-      <p id="week_day"></p>
-      <p id="week"></p>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <title>课程提醒</title>
+  <link rel="stylesheet" href="./bootstrap-2.3.2/docs/assets/css/bootstrap.css">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
 
-    <p id="lesson">软件工程</p>
+<body>
 
-  </body>
+  <div class="row">
+    <h1 class="span9" id="week"></h1>
+    <h3 class="span5" id="week_day"></h3>
+  </div>
 
-<script src="./render/gotolesson.js"></script>
+  <ul id="lessons"></ul>
+
+</body>
+<script src="./render/index.js"></script>
+<script src="./bootstrap-2.3.2/docs/assets/js/jquery.js"></script>
+<script src="./bootstrap-2.3.2/docs/assets/js/bootstrap.js"></script>
 
 </html>

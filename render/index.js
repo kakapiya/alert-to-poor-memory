@@ -1,8 +1,11 @@
-var MyDate = require('../mymodule/date')
+var MyDate = require('./render/date')
+var lessons = require('./render/lessons')
+var fs = require('fs')
 
 let notification = new Notification('标题', {
 	body: '通知正文内容'
 })
+
 
 let getDay = () => {
 	var d = new Date();
@@ -15,23 +18,20 @@ let getDay = () => {
 	weekday[5] = "周五";
 	weekday[6] = "周六";
 	var x = document.getElementById("week_day");
-	x.innerHTML = weekday[d.getDay()];
-
+	x.innerHTML = weekday[d.getDay()]
 	var y = document.getElementById("week");
-	y.innerHTML = MyDate.week
+	y.innerHTML = `第${MyDate.week}周`
 
 }
 
 
+var promise = new Promise((resolve, reject)=>{
+	fs.readFile('./data/MyLessons.json')
+});
 
-
-
-//课程判定
-let whatLesson = () => {
-	window.alert(navigator.onLine ? 'online' : 'offline')
-}
+var obj = JSON.parse(data)
+// console.log(JSON.stringify(obj))
+console.log(obj['mon'][0].name)
 
 //执行
 getDay()
-
-console.log(MyDate.week)
